@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/court">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/SecondaryLinear"
+            tools:context=".MainActivity">
+
+            <TextView
+                style="@style/Contenders"
+                android:text="@string/condender_1" />
+
+            <TextView
+                android:id="@+id/nadal_score"
+                style="@style/Score"
+                android:text="@string/initial_point" />
+
+            <Button
+                style="@style/PointButton"
+                android:onClick="addPointsNadal"
+                android:text="@string/points_earned" />
+
+            <TextView
+                android:id="@+id/nadal_points"
+                style="@style/Points"
+                android:text="@string/initial_score" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/SecondaryLinear"
+            tools:context=".MainActivity">
+
+            <TextView
+                style="@style/Contenders"
+                android:text="@string/contender_2" />
+
+            <TextView
+                android:id="@+id/federer_score"
+                style="@style/Score"
+                android:text="@string/initial_point" />
+
+            <Button
+                style="@style/PointButton"
+                android:onClick="addPointsFederer"
+                android:text="@string/points_earned" />
+
+            <TextView
+                android:id="@+id/federer_points"
+                style="@style/Points"
+                android:text="@string/initial_score" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        style="@style/ResetButton"
+        android:onClick="resetScore"
+        android:text="@string/reset_button" />
+</RelativeLayout>

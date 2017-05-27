@@ -1,0 +1,16 @@
+<resources>
+    <!-- app name -->
+    <string name="app_name">TennisCountingApp</string>
+
+    <!-- name of the contenders -->
+    <string name="condender_1">Nadal</string>
+    <string name="contender_2">Federer</string>
+
+    <!-- points -->
+    <string name="initial_point">0</string>
+    <string name="initial_score">love</string>
+
+    <!-- button -->
+    <string name="points_earned">+ points</string>
+    <string name="reset_button">reset</string>
+</resources>
