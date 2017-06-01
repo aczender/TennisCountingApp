@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.example.android.tenniscountingapp.R.id.federer_ace;
 import static com.example.android.tenniscountingapp.R.id.federer_points;
+import static com.example.android.tenniscountingapp.R.id.nadal_ace;
 import static com.example.android.tenniscountingapp.R.id.nadal_points;
 import static com.example.android.tenniscountingapp.R.id.nadal_score;
 
@@ -16,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
     int scoreFederer = 0;
     int pointsForNadal = 0;
     int pointsForFederer = 0;
+    int aceNadal = 0;
+    int aceFederer = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +35,19 @@ public class MainActivity extends AppCompatActivity {
         scoreNadal = scoreNadal + 1;
         displayNadal(scoreNadal);
     }
+
     /**
      * displays the score for Nadal
      */
-    public void displayNadal (int score) {
-     TextView scoreView = (TextView) findViewById(nadal_score);
-     scoreView.setText(String.valueOf(score));
-     }
+    public void displayNadal(int score) {
+        TextView scoreView = (TextView) findViewById(nadal_score);
+        scoreView.setText(String.valueOf(score));
+    }
 
     /**
      * add 15 points to Nadal
      */
-    public void addPointsNadal (View view) {
+    public void addPointsNadal(View view) {
         pointsForNadal = pointsForNadal + 15;
         displayForNadal(pointsForNadal);
         if (pointsForNadal > 45) {
@@ -52,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
             displayForNadal(pointsForNadal);
         }
     }
-     /**
+
+    /**
      * displays the points for Nadal
      */
     public void displayForNadal(int score) {
@@ -79,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * add 15 points to Federer
      */
-    public void addPointsFederer (View view) {
+    public void addPointsFederer(View view) {
         pointsForFederer = pointsForFederer + 15;
         displayForFederer(pointsForFederer);
         if (pointsForFederer > 45) {
@@ -100,16 +107,53 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * add 1 ace to Nadal
+     */
+    public void aceNadal(View view) {
+        aceNadal = aceNadal + 1;
+        displayAceNadal(aceNadal);
+    }
+
+    /**
+     * displays the aces for Federer
+     */
+    public void displayAceNadal(int score) {
+        TextView scoreView = (TextView) findViewById(nadal_ace);
+        scoreView.setText(String.valueOf(score));
+    }
+
+
+    /**
+     * add 1 ace to Federer
+     */
+    public void aceFederer(View view) {
+        aceFederer = aceFederer + 1;
+        displayAceFederer(aceFederer);
+    }
+
+    /**
+     * displays the aces for Federer
+     */
+    public void displayAceFederer(int score) {
+        TextView scoreView = (TextView) findViewById(federer_ace);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    /**
      * Resets the score
      */
-    public void resetScore (View view){
-       scoreNadal = 0;
-       scoreFederer = 0;
-       displayNadal(scoreNadal);
-       displayFederer(scoreFederer);
-       pointsForNadal = 0;
-       pointsForFederer = 0;
-       displayForNadal(pointsForNadal);
-       displayForFederer(pointsForFederer);
+    public void resetScore(View view) {
+        scoreNadal = 0;
+        scoreFederer = 0;
+        displayNadal(scoreNadal);
+        displayFederer(scoreFederer);
+        pointsForNadal = 0;
+        pointsForFederer = 0;
+        displayForNadal(pointsForNadal);
+        displayForFederer(pointsForFederer);
+        aceFederer = 0;
+        aceNadal = 0;
+        displayAceFederer(aceFederer);
+        displayAceNadal(aceNadal);
     }
 }

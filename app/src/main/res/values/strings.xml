@@ -13,4 +13,6 @@
     <!-- button -->
     <string name="points_earned">+ points</string>
     <string name="reset_button">reset</string>
+    <string name="ace_earned">aces</string>
+
 </resources>

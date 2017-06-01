@@ -34,6 +34,17 @@
                 style="@style/Points"
                 android:text="@string/initial_score" />
 
+            <Button
+                style="@style/AceButton"
+                android:layout_marginTop="20dp"
+                android:onClick="aceNadal"
+                android:text="@string/ace_earned" />
+
+            <TextView
+                android:id="@+id/nadal_ace"
+                style="@style/Ace"
+                android:text="@string/initial_point" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -58,6 +69,17 @@
                 android:id="@+id/federer_points"
                 style="@style/Points"
                 android:text="@string/initial_score" />
+
+            <Button
+                style="@style/AceButton"
+                android:onClick="aceFederer"
+                android:layout_marginTop="20dp"
+                android:text="@string/ace_earned" />
+
+            <TextView
+                android:id="@+id/federer_ace"
+                style="@style/Ace"
+                android:text="@string/initial_point" />
 
         </LinearLayout>
 
